@@ -26,4 +26,17 @@ function drawShapes() {
   canvasContext.strokeStyle ="darkblue";
   canvasContext.stroke();
 
+  var arrow = document.getElementById("arrow");
+  canvasContext = arrow.getContext("2d");
+  canvasContext.beginPath();
+  canvasContext.moveTo(1, 40);
+  canvasContext.lineTo(50, 40);
+  canvasContext.lineTo(50, 20);
+  canvasContext.lineTo(100, 50);
+  canvasContext.lineTo(50, 80);
+  canvasContext.lineTo(50, 65);
+  canvasContext.lineTo(1, 65);
+  canvasContext.closePath();
+  canvasContext.strokeStyle ="darkblue";
+  canvasContext.stroke();
 }
