@@ -98,6 +98,16 @@ var triangleCounter = 0;
 
 function drawTriangle(canvasContext, x, y) {
   triangleCounter++;
+  canvasContext.beginPath();
+  canvasContext.moveTo(x, y - 50);
+  canvasContext.lineTo(x + 50, y + 50);
+  canvasContext.lineTo(x - 50, y + 50);
+  canvasContext.closePath();
+  canvasContext.font = "14px Times";
+  canvasContext.fillStyle = "darkblue";
+  canvasContext.fillText("Triangle " + triangleCounter, x - 30, y + 30);
+  canvasContext.strokeStyle = "darkblue";
+  canvasContext.stroke();
 }
 
 var arrowCounter = 0;
