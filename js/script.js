@@ -114,4 +114,18 @@ var arrowCounter = 0;
 
 function drawArrow(canvasContext, x, y) {
   arrowCounter++;
+  canvasContext.beginPath();
+  canvasContext.moveTo(x - 50, y - 15);
+  canvasContext.lineTo(x, y - 15);
+  canvasContext.lineTo(x, y - 30);
+  canvasContext.lineTo(x + 50, y);
+  canvasContext.lineTo(x, y + 30);
+  canvasContext.lineTo(x, y + 15);
+  canvasContext.lineTo(x - 50, y + 15);
+  canvasContext.closePath();
+  canvasContext.font = "14px Times";
+  canvasContext.fillStyle = "darkblue";
+  canvasContext.fillText("Arrow " + arrowCounter, x - 32, y + 5);
+  canvasContext.strokeStyle = "darkblue";
+  canvasContext.stroke();
 }
