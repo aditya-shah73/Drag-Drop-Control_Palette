@@ -1,5 +1,4 @@
 function drawShapes() {
-  console.log("Test");
   var rectangle = document.getElementById("rectangle");
   var canvasContext = rectangle.getContext("2d");
   canvasContext.beginPath();
@@ -73,7 +72,7 @@ var rectangleCounter = 0;
 function drawRectangle(canvasContext, x, y) {
   rectangleCounter++;
   canvasContext.beginPath();
-  canvasContext.rect(x - 50, y - 50, 98, 98);
+  canvasContext.rect(x - 50, y - 50, 100, 100);
   canvasContext.closePath();
   canvasContext.font = "14px Times";
   canvasContext.fillStyle = "darkblue";
@@ -86,6 +85,13 @@ var circleCounter = 0;
 
 function drawCircle(canvasContext, x, y) {
   circleCounter++;
+  canvasContext.beginPath();
+  canvasContext.arc(x, y, 50, 0, 2 * Math.PI);
+  canvasContext.font = "14px Times";
+  canvasContext.fillStyle = "darkblue";
+  canvasContext.fillText("Circle " + circleCounter, x - 25, y + 7);
+  canvasContext.strokeStyle = "darkblue";
+  canvasContext.stroke();
 }
 
 var triangleCounter = 0;
